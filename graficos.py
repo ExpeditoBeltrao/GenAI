@@ -5,6 +5,7 @@ pygame.init()
 font = pygame.font.SysFont("Arial", 18)
 
 # Gráficos e interface
+# Função para criação do gráfico "Evolução da Aptidão".
 def desenhar_grafico(screen, x, y, x_label="Gerações", y_label="Aptidão - Quantidade de Vacas"):
     fig, ax = plt.subplots(figsize=(8, 4), dpi=100)
     ax.plot(x, y, label="Melhor Aptidão", color="blue", linewidth=2)
@@ -25,6 +26,7 @@ def desenhar_grafico(screen, x, y, x_label="Gerações", y_label="Aptidão - Qua
     screen.blit(surf, (50, 50))
     plt.close(fig)
 
+# Função para criação da representação do melhor indivíduo, maior aptidão, exibindo os piquetes com o respectivo número de vacas.
 def desenhar_piquetes(screen, melhor_individuo, x_center, y_start=550, square_size=80):
     espaco = 10
     total_largura = len(melhor_individuo) * (square_size + espaco) - espaco
@@ -53,6 +55,7 @@ def desenhar_piquetes(screen, melhor_individuo, x_center, y_start=550, square_si
         text_rect_label = texto_label.get_rect(center=(x_pos + square_size // 2, y_pos + square_size // 2 + 20))
         screen.blit(texto_label, text_rect_label)
 
+# Funções para inclusão das instruções de navegação.
 def incluir_instrucoes(screen, WIDTH, HEIGHT):
     # Resumo das teclas
     instrucoes = [

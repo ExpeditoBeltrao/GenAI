@@ -44,10 +44,15 @@ def crossover(pai1, pai2, num_piquetes):
     
 # Função de mutação. Utiliza a Mutação Adaptativa, onde a taxa de mutação é maior nas gerações iniciais e menor nas finais.
 def mutacao(individuo, taxa_mutacao):
-    for i in range(len(individuo)):
+
+    indices_mutacao = random.sample(range(len(individuo)), 2)
+
+    for i in indices_mutacao:
         if random.random() < taxa_mutacao:
             individuo[i] = random.randint(0, 50)  # Define um novo valor aleatório para o gene
+    
     return individuo
+
 
 # Métodos de seleção
 # Função para seleção aleatória. Dois indivíduos serão selecionados.

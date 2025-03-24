@@ -169,7 +169,7 @@ def executar_algoritmo(populacao_predefinida=None):
 
 # Função Principal
 if __name__ == "__main__":
-# Adicione uma variável para armazenar a população pré-definida
+   # Variável para armazenar a população pré-definida
     populacao_predefinida = None
 
     while True:

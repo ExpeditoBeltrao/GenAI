@@ -60,7 +60,7 @@ def incluir_instrucoes(screen, WIDTH, HEIGHT):
     # Resumo das teclas
     instrucoes = [
          "Navegação: Pressione as teclas",
-         "r - Reiniciar | p - Pausar | m - Voltar ao Menu"
+         "r - Reiniciar | p - Pausar | m - Voltar ao Menu | ESC - Sair"
         ]
     for i, instrucao in enumerate(instrucoes):
         texto_instrucao = pygame.font.SysFont("Arial", 16).render(instrucao, True, (0, 0, 0))
